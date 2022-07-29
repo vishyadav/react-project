@@ -10,9 +10,9 @@ const Login = () => {
       <div className='col-md-8 p-3'>
       
     <div className='row rounded shadow'>
-      <div className='col-md-6' style={{background:'url(./images/cartimg.jpg)',backgroundSize:'contain',backgroundRepeat:'no-repeat'}}>
+      <div className='col-lg-6 bg-white' style={{background:'url(./images/cartimg.jpg)',backgroundSize:'contain',backgroundRepeat:'no-repeat'}}>
       </div>
-      <div className='col-md-6 py-5 px-5 justify-content-center bg-light'>
+      <div className='col-lg-6 py-5 px-5 justify-content-center bg-light'>
         <h5 className='mb-5'>Let's Get you Logged In!</h5>
         
         <small className='text-muted'>Enter Your 10 digit mobile number.</small><br/>

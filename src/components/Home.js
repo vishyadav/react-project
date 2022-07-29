@@ -86,6 +86,7 @@ function home() {
       </Card>
     </div>
   </div>
+
   </div>
   );
 }
