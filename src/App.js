@@ -1,7 +1,8 @@
 import React from 'react'
 import { Routes ,Route } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import Button from 'react-bootstrap/esm/Button';
+import ButtonGroup from 'react-bootstrap/esm/ButtonGroup';
 import './App.css';
 import Home from './components/Home';
 import Login from './components/Login'
@@ -9,6 +10,7 @@ import Register from './components/Register'
 import Location from './components/Location'
 import Cart from './components/Cart';
 import Search from './components/Search';
+import Product from './components/Product';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -64,6 +66,7 @@ const App = () => {
           <Route path='/location' element={<Location/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/search' element={<Search/>}/>
+          <Route path='/product' element={<Product/>}/>
         </Routes>
 
     </div>
