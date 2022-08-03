@@ -6,7 +6,6 @@ const ProductDetail = () => {
   return (
     <div className='container'>
         <Product />
-        check clone
     </div>
   )
 }
