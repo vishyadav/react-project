@@ -30,9 +30,9 @@ const Product = () => {
             </div> 
             <div className='mt-3'>
                 <select className='form-control w-100'>
-                    <option>2 Litre</option>
-                    <option>3 Litre</option>
-                    <option>4 Litre</option>
+                    <option>2 Ltr</option>
+                    <option>3 Ltr</option>
+                    <option>4 Ltr</option>
                 </select>
             </div>  
             <div className='mt-3'>
