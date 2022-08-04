@@ -23,17 +23,16 @@ const IncrementDecrement = () => {
         }
   return (
     <>
-    <div className="col-12">
-    <div class="input-group">
+    <div className="col-12 d-flex justify-content-end">
+    <div class="input-group" style={{width:'130px'}}>
         <div class="input-group-prepend">
-            <button class="btn btn-outline-danger" type="button" onClick={decNum}><RemoveIcon/></button>
+            <button class="rounded-circle text-white _btn _btn-info p-2" style={{fontSize:'14px'}} type="button" onClick={decNum}><RemoveIcon/></button>
         </div>
-        <input type="text" class="form-control text-center fs-4 text-muted p-0 fw-bold" value={num} onChange={handleChange}/>
+        <input type="text" class="text-center fs-4 p-0 fw-light bg-transparent border-0 form-control" value={num} onChange={handleChange}/>
         <div class="input-group-prepend">
-            <button class="btn btn-outline-success" type="button" onClick={incNum}><AddIcon/></button>
+            <button class="rounded-circle text-white _btn _btn-info p-2" style={{fontSize:'14px'}} type="button" onClick={incNum}><AddIcon/></button>
         </div>
     </div>
-
     </div>
     </>
   )

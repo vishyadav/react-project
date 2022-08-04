@@ -1,0 +1,19 @@
+.input-icons span {
+    position: absolute;
+}
+  
+.input-icons {
+    position: relative;
+    width: 100%;
+}
+  
+.input-icons .icon {
+    padding: 10px 5px 9px 8px;
+    min-width: 40px;
+    font-size: 14px;
+    font-weight: 600;  
+}
+  
+.input-icons input {
+    padding-left: 40px!important;
+}

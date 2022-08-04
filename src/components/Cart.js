@@ -9,6 +9,7 @@ import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import { border } from '@mui/system';
+import IncrementDecrement from './IncrementDecrement';
 const Cart = () => {
   return (
     <>
@@ -77,11 +78,7 @@ const Cart = () => {
                           </div>
 
                           <div className='d-flex justify-content-end'>
-                          <ButtonGroup aria-label="Basic example">
-                            <Button className='circle text-light btn-sm' variant="info"><RemoveOutlinedIcon/></Button>
-                            <Button variant="white" className='fs-5 fw-bold'>10</Button>
-                            <Button className='circle text-light btn-sm' variant="info"><AddOutlinedIcon/></Button>
-                          </ButtonGroup>
+                          <IncrementDecrement/>
                           </div>
                         </section>
 {/* cart item  */}
@@ -103,11 +100,7 @@ const Cart = () => {
                           </div>
 
                           <div className='d-flex justify-content-end'>
-                          <ButtonGroup aria-label="Basic example">
-                            <Button className='circle text-light btn-sm' variant="info"><RemoveOutlinedIcon/></Button>
-                            <Button variant="white" className='fs-5 fw-bold'>10</Button>
-                            <Button className='circle text-light btn-sm' variant="info"><AddOutlinedIcon/></Button>
-                          </ButtonGroup>
+                          <IncrementDecrement/>
                           </div>
                         </section>
 {/* cart item  */}
@@ -136,7 +129,7 @@ const Cart = () => {
                       </section>
 
                       <section className='d-flex justify-content-end my-3'>
-                      <button className='btn btn-info w-100 btn-lg px-5 text-white fw-bold'>Place Order</button>
+                      <button className='_btn _btn-info _btn-rounded w-100 px-5 text-white fw-bold'>Place Order</button>
                       </section>
                       
                     </div>

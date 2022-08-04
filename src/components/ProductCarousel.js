@@ -1,50 +1,38 @@
 import React from 'react'
 import Product from './Product';
-import { Button } from 'bootstrap';
-import './ProductCarousel.css'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
-const ProductCarousel = () => {
-    let box = document.querySelector('.product-container');
 
-    const btnpressprev = () => {
-        let width = box.clientWidth;
-        box.scrollLeft = box.scrollLeft - width;
-        console.log(width)
-    }
 
-    const btnpressnext = () => {
-        let width = box.clientWidth;
-        box.scrollLeft = box.scrollLeft + width;
-        console.log(width)
-    }
+export default () => {
     return (
-        <div className="product-carousel">
-            <button className="pre-btn" onClick={btnpressprev}><p>&lt;</p></button>
-            <button className="next-btn" onClick={btnpressnext}><p>&gt;</p></button>
-
-
-            <div className="product-container w-100">
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-            </div>
-        </div>
-    )
-}
-
-export default ProductCarousel
+      <Swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={0}
+      slidesPerView={4}
+      navigation
+    //   pagination={{ clickable: true }}
+    //   scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+      >
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+        <SwiperSlide><Product/></SwiperSlide>
+      </Swiper>
+    );
+  };

@@ -1,5 +1,21 @@
 import React from 'react'
+import '../App.css'
+import SearchIcon from '@mui/icons-material/Search';
 const Location = () => {
+
+    function checklocation(event){
+         let cityname = 'Noida';
+         let lblmsg = document.getElementById('lblmsg');
+
+        if(event.target.value == cityname){
+            Response.redirect('/Home');
+            lblmsg.innerHTML = '';
+            console.log(event.target.value);
+        }
+        else{
+            lblmsg.innerHTML = 'Sorry, we currently do not serve at this location. Our services are available in Delhi, Noida, Gaziabad and Gurugram';
+        }
+    }
   return (
     <>
     <div className='container my-5'>
@@ -7,11 +23,13 @@ const Location = () => {
             <div className='col-md-6 rounded shadow bg-white p-3 pt-5 mb-5' style={{minheight: "400px"}}>
                 <div className='row'>
                     <div className='col-12 text-center'>
-                     <h4 className='text-muted'>Where Should We Deliver Your Order?</h4>
+                     <h4 className='_text-muted'>Where Should We Deliver Your Order?</h4>
                     </div>
 
-                    <div className='col-12 text-center'>
-                        <input className='form-control' placeholder='Enter your city, area Or pincode'/>
+                    <div className='col-12 text-center mt-3 input-icons'>
+                        <span className='icon'><SearchIcon /></span>
+                        <input className='_form-control' onChange={checklocation} style={{width:'calc(100% - 7rem)'}} placeholder='Enter your city, area Or pincode'/>
+                        <div><small id='lblmsg' className='text-danger'></small></div>
                     </div>
 
                     <div className='col-12 mt-5 text-center'>

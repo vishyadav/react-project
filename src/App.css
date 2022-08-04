@@ -29,7 +29,7 @@ body{
     }
 
   a{
-    color: #112d4e; 
+     
     text-decoration: none !important;
   }
 small{
@@ -98,31 +98,69 @@ small{
 ._bg-light-info{
  background-color:#84e2f7 ;   
 }
+
+._btn{
+    border-radius:4px;
+    background:#fff;
+    padding: 10px 5px 10px 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+._btn-rounded{
+    border-radius: 25px !important;
+}    
+._btn:hover{
+    box-shadow: rgba(247, 157, 157, 0.678) 0px 2px 8px 0px;
+    transition: 0.3s;
+    outline: rgba(247, 157, 157, 0.678) 0px 2px 8px 0px;
+}
+
 ._btn-success{
     color: #fff;
     background-color: #03B023;
     border-color: #03B023;
+}
+._btn-success:hover{
+    background-color: #03b023b9;
+    border-color: #03b023b9
 }
 ._btn-primary{
     color: #fff;
     background-color: #3189EC;
     border-color: #3189EC;
 }
+._btn-primary:hover{
+    background-color: #3188ecbb;
+    border-color: #3188ecbb
+}
 ._btn-danger{
     color: #fff;
     background-color: #c70909;
     border-color: #c70909;
+}
+._btn-danger:hover{
+    background-color: #c70909bb;
+    border-color: #c70909bb
 }
 ._btn-dark{
     color: #fff;
     background-color: #1c1d1d;
     border-color: #1c1d1d;
 }
+._btn-dark:hover{
+    background-color: #1c1d1dbd;
+    border-color: #1c1d1dbd
+}
 ._btn-info{
     color: #fff;
     background-color: #23CCF1;
     border-color: #23CCF1;
 }
+._btn-info:hover{
+    background-color: #23cbf1b6;
+    border-color: #23cbf1b6
+}
+
 ._btn-light{
     color: #fff;
     background-color: #f0f0f0f0;
@@ -132,10 +170,37 @@ small{
     outline: none !important;
     box-shadow: none !important;
 }
-.form-control:focus{
+._form-control{
+    border: 1px solid rgba(0,0,0,.04);
+    padding: 9px 0 9px 12px;
+    margin: 0;
+    font-size: 14px;
+    color: #000;
+    border-radius: 4px;
+    width:100%;
+    font-weight: 600;
+}
+
+._form-control:focus{
     outline: none !important;
     box-shadow: none !important;  
 }
+._form-control::placeholder{
+color:#ccc;
+font-size: 14px;
+font-weight: normal;
+}
+._form-control::-moz-placeholder{
+    color:#ccc;
+    font-size: 14px;
+    font-weight: normal;
+}
+._form-control::-webkit-input-placeholder{
+    color:#ccc;
+    font-size: 14px;
+    font-weight: normal;
+}
+
 
 /* width */
 ::-webkit-scrollbar {   
@@ -157,3 +222,27 @@ small{
     background: #555; 
   }
 
+  .input-icons span {
+    position: absolute;
+}
+  
+/*add icon in input*/
+.input-icons {
+    position: relative;
+    width: 100%;
+}
+  
+.input-icons .icon {
+    padding: 10px 5px 9px 8px;
+    min-width: 40px;
+    font-size: 14px;
+    font-weight: 600;  
+}
+  
+.input-icons input {
+    padding-left: 40px!important;
+}
+
+.css-fqe407-MuiBadge-badge{
+    background-color:#e32121 !important ;
+}
