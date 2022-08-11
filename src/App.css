@@ -10,6 +10,8 @@
 
 body{
     /* font-family: "Helvetica", Sans-Serif; */
+    margin: 0px;
+    padding: 0px;
     background: rgb(246 246 247) !important;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Roboto Flex', sans-serif;
@@ -35,15 +37,19 @@ body{
 small{
     font-size: small !important;
 }
+
 ._shadow{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+._rounded{
+    border-radius:20px;
 }
 
 ._text-success{
     color:#03B023;
 }
 ._text-primary{
-    color:#3189EC;
+    color:midnightblue;
 }
 ._text-danger{
     color:#c70909;
@@ -68,7 +74,7 @@ small{
     background-color: #03B023;
 }
 ._bg-primary{
-    background-color:#3189EC ;
+    background-color:midnightblue ;
 }
 ._bg-danger{
     background-color: #c70909;
@@ -77,7 +83,7 @@ small{
     background-color:#1c1d1d ;
 }
 ._bg-info{
- background-color:#23CCF1 ;   
+ background-color:#23CCF1 #007aff ;   
 }
 ._bg-light{
     background-color: #f0f0f0f0;
@@ -87,7 +93,7 @@ small{
     background-color: #ebf8eb;
 }
 ._bg-light-primary{
-    background-color:#91bcee ;
+    background-color:rgb(49, 49, 119) ;
 }
 ._bg-light-danger{
     background-color: #c56f6f;
@@ -126,12 +132,12 @@ small{
 }
 ._btn-primary{
     color: #fff;
-    background-color: #3189EC;
-    border-color: #3189EC;
+    background-color: midnightblue;
+    border-color: midnightblue;
 }
 ._btn-primary:hover{
-    background-color: #3188ecbb;
-    border-color: #3188ecbb
+    background-color: rgb(49, 49, 119);
+    border-color: rgb(49, 49, 119)
 }
 ._btn-danger{
     color: #fff;

@@ -47,7 +47,7 @@ const Cart = () => {
 
                 <div className='row'>
                     <div className='col-md-8 mt-3'>
-                        <section className='rounded p-3 bg-white'>
+                        <section className='_rounded _shadow p-3 bg-white'>
 
                           <div className='d-flex justify-content-between'>
                             <h4>Groceries Basket <small className='_text-muted'>(2 items)</small></h4>
@@ -109,7 +109,7 @@ const Cart = () => {
                     </div>
 
                     <div className='col-md-4 mt-3'>
-                      <section className='rounded p-3 bg-white'>
+                      <section className='_rounded _shadow p-3 bg-white'>
                         <label className='fs-4 fw-bold'>Payment Details</label>
                         <div className='d-flex justify-content-between py-2'>
                           <span className='_text-muted'>MRP Total</span>
@@ -129,7 +129,7 @@ const Cart = () => {
                       </section>
 
                       <section className='d-flex justify-content-end my-3'>
-                      <button className='_btn _btn-info _btn-rounded w-100 px-5 text-white fw-bold'>Place Order</button>
+                      <button className='_btn _btn-primary _btn-rounded w-100 px-5 text-white fw-bold'>Place Order</button>
                       </section>
                       
                     </div>

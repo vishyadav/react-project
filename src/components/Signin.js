@@ -18,19 +18,19 @@ function textboxvailidate(event){
 
   return (
     <>
-  <div className='container'>
+  <div className='container-fluid' >
     <div className='row justify-content-center'>
-      <div className='col-md-8 p-3'>
+      <div className='col-md-11 col-sm-8 col-lg-8 my-5' id='signinbox'>
       
-    <div className='row rounded _shadow'>
-      <div className='col-lg-6 bg-white' style={{background:'url(./images/cartimg.jpg)',backgroundSize:'contain',backgroundRepeat:'no-repeat'}}>
+    <div className='row' >
+      <div className='col-md-6' style={{background:'url(./images/login_banner.jpg)',borderTopLeftRadius:'20px',borderBottomLeftRadius:'20px',backgroundSize:'cover',backgroundRepeat:'no-repeat'}}>
       </div>
-      <div className='col-lg-6 py-5 px-5 justify-content-center bg-light'>
-        <h5 className='fw-bold'>Sign in</h5>
+      <div className='col-md-6 py-5 px-md-5 px-5 justify-content-center'>
+        <h4 className='fw-bold'>Sign in</h4>
         <p className='fs-6 fw-light _text-muted'>Sign in to access your Orders, Offers and Wishlist.</p>
         
         
-         <div className='my-5 input-icons'>
+         <div className='my-3 input-icons'>
          <div><small id="lbl_msg"></small></div>
         <span className='icon'>+91</span>
         <input type="{text}" onChange={textboxvailidate}  className='_form-control' placeholder={'Mobile Number'}/>
