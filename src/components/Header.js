@@ -42,7 +42,7 @@ const Header = () => {
             <div className='col-md-2 col-lg-2 col-12 align-self-center'>
                 <NavLink className={"d-flex text-white"} to="/Location">
                   <LocationOnIcon className='align-self-center me-0'/> 
-                  <label className='align-self-center' style={{cursor:'pointer'}}>hyderabad.. 500004</label>
+                  <label className='align-self-center' style={{cursor:'pointer'}}>udaipur</label>
                 </NavLink>
             </div>
 
