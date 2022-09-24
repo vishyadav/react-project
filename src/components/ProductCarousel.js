@@ -1,21 +1,22 @@
 import React from 'react'
-import Product from './Product';
+import Card from './Card';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 // import required modules
-import './ProductCarousel.css'
+import '../styles/ProductCarousel.css'
 import { Navigation } from "swiper";
+import list from './ProductData';
 
-export default () => {
+const ProductCarousel = () => {
 
     return (
-     <>
+     <> 
     <Swiper
         slidesPerView={"auto"}
-        spaceBetween={30}
+        spaceBetween={20}
         grabCursor={true}
         loop={true}
         loopFillGroupWithBlank={true}
@@ -23,16 +24,13 @@ export default () => {
         modules={[Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><Product/></SwiperSlide>
-        <SwiperSlide><Product/></SwiperSlide>
-        <SwiperSlide><Product/></SwiperSlide>
-        <SwiperSlide><Product/></SwiperSlide>
-        <SwiperSlide><Product/></SwiperSlide>
-        <SwiperSlide><Product/></SwiperSlide>
-        <SwiperSlide><Product/></SwiperSlide>
-        <SwiperSlide><Product/></SwiperSlide>
-        <SwiperSlide><Product/></SwiperSlide>
-      </Swiper>
+        {list.map((item)=>(
+          <SwiperSlide>
+          <Card className="cardbox" key={item.id} item={item}/>
+          </SwiperSlide>
+       ))}
+      </Swiper> 
     </>
     );
   };
+  export default ProductCarousel;

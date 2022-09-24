@@ -1,0 +1,35 @@
+#profile_section
+{
+    border-right:1px solid #ccc;
+    padding:10px 0px;
+    background-color: #fff;
+    height:100%;
+}
+
+#profile_section ul{
+    padding: 0;
+}
+#profile_section ul li{
+list-style: none;
+padding:5px 10px;
+color:#000;
+font-weight: 500;
+}
+#profile_section ul ul li{
+    list-style: none;
+    border-bottom: 1px solid #f1f1f1;
+    padding:5px 20px;
+    color:#aaa;
+    font-weight:400;
+    cursor: pointer;
+    }
+#profile_section ul ul li:hover{
+    background-color: #f1f1f1;
+    color: #00a100!important;
+}
+
+/* Account content */
+#profile_section ~ div{
+    padding-top: 30px;
+    padding-bottom: 30px;
+ }

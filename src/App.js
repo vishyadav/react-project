@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes ,Route } from 'react-router-dom';
+import React,{useState} from 'react'
+import { Routes ,Route, useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/esm/Button';
 import ButtonGroup from 'react-bootstrap/esm/ButtonGroup';
@@ -9,29 +9,53 @@ import Signin from './components/Signin'
 import Register from './components/Register'
 import Location from './components/Location'
 import Cart from './components/Cart';
-import Search from './components/Search';
-import Product from './components/Product';
+import Card from './components/Card';
 import ProductDetail from './components/ProductDetail';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Category from './components/Category';
+import Profile from './components/Profile';
+import Order from './components/Order';
+import Account from './components/Account';
+import SideMenu from './components/Drawer';
+import Gmap from './components/Gmap';
 
 
+// import { useSelector, useDispatch } from "react-redux";
 const App = () => {
+  
+  const navigate = useNavigate();
+  const navigateHome = () => {
+    // 👇️ navigate to /
+    navigate('/');  
+  };
+
+  const [Cat,setUser]=useState("hello");
+  
+
+  
+
   return (
     <div className='container-fluid'>  
     <Header/>     
-        <Routes>
-          <Route path='/' element={<Home/>} exact/>
-          <Route path='/home' element={<Home/>} />
-          <Route path='/Signin' element={<Signin/>}/>
-          <Route path='/register' element={<Register/>}/>
-          <Route path='/location' element={<Location/>}/>
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='/search' element={<Search/>}/>
-          <Route path='/product' element={<Product/>}/>
-          <Route path='/ProductDetail' element={<ProductDetail/>}/>
-        </Routes>
-   <Footer/>
+    <Routes>
+      <Route path='/' element={<Home/>} exact/>
+      <Route path='/home' element={<Home/>} />
+      <Route path='/Signin' element={<Signin/>}/>
+      <Route path='/register' element={<Register/>}/>
+      <Route path='/location' element={<Location/>}/>
+      <Route path='/cart' element={<Cart/>}/>
+      <Route path='/Card' element={<Card/>}/>
+      <Route path='/ProductDetail' element={<ProductDetail/>}/>
+      <Route path='/Category' element={<Category title={Cat}/>}/>
+      <Route path='/Profile' element={<Profile/>}/>
+      <Route path='/Order' element={<Order/>}/>
+      <Route path='/Account' element={<Account/>}/>
+      <Route path='/SideMenu' element={<SideMenu/>}/>
+      <Route path='/Gmap' element={<Gmap/>}/>
+      
+      </Routes>
+    <Footer/>
     </div>
   )
 }

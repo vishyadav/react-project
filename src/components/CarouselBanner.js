@@ -10,18 +10,13 @@ const CarouselBanner = () => {
       <Swiper className="mySwiper">
         <SwiperSlide><img
           className="d-block w-100"
-          src="https://cdn.dmart.in/images/rwd/banners/hmpg/15july22-crsl-halfprice-hyd1.jpg"
+          src="../images/Ganesh-Festival_1680.jpg"
           alt="First slide"
         /></SwiperSlide>
         <SwiperSlide><img
           className="d-block w-100"
-          src="https://cdn.dmart.in/images/rwd/banners/hmpg/15july22-crsl-ds-hyd1.jpg"
+          src="../images/Carousel-Banner-23_08_2022.jpg"
           alt="Second slide"
-        /></SwiperSlide>
-        <SwiperSlide><img
-          className="d-block w-100"
-          src="https://cdn.dmart.in/images/rwd/banners/hmpg/26may22-crsl-workndplay.jpg"
-          alt="Third slide"
         /></SwiperSlide>
       </Swiper>
     </>

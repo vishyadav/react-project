@@ -1,0 +1,41 @@
+  
+.input_group {
+    position: relative;
+    width: 100%;
+}
+  
+.input_group .input_group_prepend {
+    position: absolute;
+    left:0;
+    padding: 10px 10px;
+    min-width: 40px;
+    font-size: 14px;
+    font-weight: 600;  
+}
+.input_group .input_group_append {
+    position: absolute;
+    right:0;
+    padding: 10px 10px;
+    min-width: 40px;
+    font-size: 14px;
+    font-weight: 600;  
+}
+  
+.input_group input {
+    padding-left: 40px!important;
+}
+#signinbox{
+    padding: 0px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+#mobilebox{display: block;}
+#mobilebtn{display: block;}
+#namefield{display: none;}
+#otpbox{display: none;}
+#changebtn{display: none;}
+.disable_inputfield{
+    cursor: no-drop;
+    pointer-events: none;
+}

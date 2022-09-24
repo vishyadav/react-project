@@ -1,0 +1,42 @@
+/* ---sub category list--- */
+
+#_categorylist ul{
+    padding:5px 12px;
+    border-bottom:1px solid rgba(0,0,0,.125);
+}
+
+#_categorylist li span{
+    font-size: 14px;
+    color:#000;
+    font-weight:600;
+    padding: 0px 12px;
+}
+#_categorylist{
+    border-bottom:1px solid rgba(0,0,0,.125);
+    border-right: 1px solid rgba(0,0,0,.125);
+    height:100%;
+    background-color: #fff;
+}
+ #_categorylist ul li ul{
+    border-bottom:1px solid rgba(0,0,0,.125);
+    /* padding:5px 12px; */
+} 
+#_categorylist ul li:hover{
+    background-color: #f1f1f1f1;
+    transition: 150ms
+}
+
+#_categorylist ul li a{
+    padding: 5px 12px;
+    color:#aaa;
+    font-size: 14px;
+    font-weight: 300;  
+}
+#_categorylist ul li a:focus{
+    color: #00a100; 
+}
+
+#_categorylist ul li .active{
+    color: #00a100;
+    font-weight: 700;
+}

@@ -1,0 +1,10 @@
+
+
+
+/* Product list */
+#product_list{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x:hidden;
+    padding:10px 0px;
+}
