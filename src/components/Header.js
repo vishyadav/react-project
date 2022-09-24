@@ -14,16 +14,12 @@ import { useSelector, useDispatch } from "react-redux";
 const Header = () => {
   const [price,setPrice] = useState(0);
 
-
-
   const [TxtSearch,setSearch] = useState("");
 
   // console.log(price);
 
-
   const getdata = useSelector((state)=> state.cartreducer.carts);
   // console.log(getdata);
-
 
   const searchData=(txt)=>{
     setSearch(txt);
@@ -42,13 +38,12 @@ const Header = () => {
             <div className='col-md-2 col-lg-2 col-12 align-self-center'>
                 <NavLink className={"d-flex text-white"} to="/Location">
                   <LocationOnIcon className='align-self-center me-0'/> 
-                  <label className='align-self-center' style={{cursor:'pointer'}}>udaipur 313001</label>
+                  <label className='align-self-center' style={{cursor:'pointer'}}>udaipur - 313003</label>
                 </NavLink>
             </div>
 
             <div className='col-md-4 col-lg-4 col-12 align-self-center px-md-2 pb-1 py-md-0'>
                 <input className='_form-control' type="{text}"  onChange={e => searchData(e.target.value)} placeholder="What are you looking for?"/>
-          
             </div>
 
             <div className='col-md-2 col-lg-2 col-3 d-flex align-self-center justify-content-end'>
