@@ -28,21 +28,59 @@ const ProductCard = () => {
         dispatch(DLT(e))
       }
     
-    const [Data,setUser]=useState([]);
-    const [Data2,setUser2]=useState([]);
+    const [Product,setProduct]=useState([]);
+    const [Itam,setItam]=useState([]);
+    
+
+    const [Category,setCategory]=useState([]);
+
+
+
 
     const getUser= async()=>{
-            const response=await fetch('https://fakestoreapi.com/products');
-        setUser(await response.json());
+            const response=await fetch('https://app.trmartindia.com/api/Product');
+           // setUser(await response.json());
+           // setCategory(await response.json());
+            setProduct(await response.json());
+            
+        setItam(Product);
+           
         }
+
+        const getCategory= async()=>{
+            const response=await fetch('https://app.trmartindia.com/api/Product');
+           // setUser(await response.json());
+           // setCategory(await response.json());
+            setCategory(await response.json());
+
+           
+        }
+
+        const getItam= async()=>{
+            const response=await fetch('https://app.trmartindia.com/api/Product');
+           // setUser(await response.json());
+           // setCategory(await response.json());
+            setCategory(await response.json());
+
+           
+        }
+
     useEffect(()=>{
-        getUser();
+       
+    getUser();
+    getCategory();
+    getItam();
     },[])
 
 
     const filterProduct=(Cat)=>{
-        const UpdatedList=Data.filter((x)=>x.category===Cat);
-        setUser2(UpdatedList);
+
+       
+
+        const UpdatedList=Itam.filter((x)=>x.OtherCategroy===Cat);
+       // alert(Cat);
+       setProduct(UpdatedList);
+        alert(Cat);
     }
 
   return (
@@ -50,34 +88,39 @@ const ProductCard = () => {
 <>
 
 
-<button onClick={()=>{filterProduct("men's clothing")}}>Man</button>
+<ul>
+ 
 
 
 
-
-<button onClick={()=>{filterProduct("women's clothing")}}>Women</button>
-
+{
 
 
+        
+        Category.map((element, id)=>{
+                return(
+                
+                    <li style={{float: "left"}}><button onClick={()=>{filterProduct(element.OtherCategroy)}}> {element.OtherCategroy+ " / "}</button> </li>               
+                )})}   
 
-<button onClick={()=>{filterProduct("jewelery")}}>jewelery</button>
 
+                </ul>     
 
 
 {/* <p onClick={()=>{setUser}}>men's clothing</p> */}
     {
         
-Data2.map((element, id)=>{
+Product.map((element, id)=>{
         return(
         <div className='col-md-3 col-lg-2 col-sm-4 col-6 gx-3 gy-0'>
         <div className='card my-2'>
             <div className='cat-img' >
-                <img className='product-image-photo' src={element.image} alt=''/>
+                <img className='product-image-photo' src={element.Img} alt=''/>
             </div>
             
             <div className='card-body'>
-                <div className="text_wrap fw-normal mb-2" style={{lineHeight:'1.2rem', fontSize:'0.9rem',minHeight:'39px'}}>{element.title}</div>
-                <strong>₹{element.price} </strong>
+                <div className="text_wrap fw-normal mb-2" style={{lineHeight:'1.2rem', fontSize:'0.9rem',minHeight:'39px'}}>{element.Pname}</div>
+                <strong>₹{element.Price} </strong>
                 <small className='border-start ps-1'>MRP : <strike>₹399.00</strike></small><br/>
                 <small className='_text-success'>You Save : ₹30.00</small>  
                     
@@ -91,7 +134,7 @@ Data2.map((element, id)=>{
                 </div>
                 <div class="input-group d-flex justify-content-end" style={{width:'100px'}}>
                     <div class="input-group-prepend">
-                    <button class="rounded-circle text-white _btn _btn-primary p-1" style={{fontSize:'14px'}} onClick={()=> Remove(element.id)} type="button" > <RemoveIcon/> </button>
+                    <button class="rounded-circle text-white _btn _btn-primary p-1" style={{fontSize:'14px'}} onClick={()=> Remove(element.ID)} type="button" > <RemoveIcon/> </button>
                     </div>
                     <input type="text" class="text-center fs-5 p-0 fw-normal bg-transparent border-0 form-control" value="0" />
                     <div class="input-group-prepend">
