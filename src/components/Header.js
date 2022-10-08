@@ -82,11 +82,11 @@ const Header = () => {
 
             <div className='col-10 col-md-10'>
               <ul>
-              <li>Household & Kitchen</li>
-              <li>Beauty & Jwellery</li>
-              <li>Health & Wellness</li>
-              <li>Fashion</li>
-              <li>Electronics</li>
+              <li><a href="/Products">Household & Kitchen</a></li>
+              <li><a href="/Products">Beauty & Jwellery</a></li>
+              <li><a href="/Products">Health & Wellness</a></li>
+              <li><a href="/Products">Fashion</a></li>
+              <li><a href="/Products">Electronics</a></li>
               </ul>
             </div>
           </div>

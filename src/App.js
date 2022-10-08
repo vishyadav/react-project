@@ -20,6 +20,12 @@ import Account from './components/Account';
 import SideMenu from './components/Drawer';
 import Gmap from './components/Gmap';
 
+import AdminIndex from './Admin/AdminIndex';
+import Sidebar from './Admin/Sidebar';
+import Dashboard from './Admin/Dashboard';
+import Products from './components/Products';
+
+
 
 // import { useSelector, useDispatch } from "react-redux";
 const App = () => {
@@ -32,9 +38,6 @@ const App = () => {
 
   const [Cat,setUser]=useState("hello");
   
-
-  
-
   return (
     <div className='container-fluid'>  
     <Header/>     
@@ -47,13 +50,17 @@ const App = () => {
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/Card' element={<Card/>}/>
       <Route path='/ProductDetail' element={<ProductDetail/>}/>
-      <Route path='/Category' element={<Category title={Cat}/>}/>
+      <Route path='/Products' element={<Products title={Cat}/>}/>
+      <Route path='/Category' element={<Category/>}/>
       <Route path='/Profile' element={<Profile/>}/>
       <Route path='/Order' element={<Order/>}/>
       <Route path='/Account' element={<Account/>}/>
       <Route path='/SideMenu' element={<SideMenu/>}/>
       <Route path='/Gmap' element={<Gmap/>}/>
-      
+   
+      <Route path='/AdminIndex' element={<AdminIndex/>}/>
+      <Route path='/Sidebar' element={<Sidebar/>}/>
+      <Route path='/Dashboard' element={<Dashboard/>}/>
       </Routes>
     <Footer/>
     </div>

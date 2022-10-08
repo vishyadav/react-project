@@ -1,0 +1,26 @@
+.quickbox{
+    border:1px solid #ccc;
+    border-radius:5px;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;  
+}
+.quickbox h4{
+    color:#000;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.quickbox p{
+    font-size: 14px;
+    font-weight:600;
+    color:rgb(68, 67, 67)
+}
+.dash_box{
+    border:1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0px;
+    min-height:200px; 
+}
