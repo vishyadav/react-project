@@ -52,25 +52,7 @@ function home() {
       <h5 className='fw-bold'>Cloth Store</h5>
       <a href="#">View All</a>
     </div>
-    <ProductCard/>
-</div>
-
-{/* category row */}
-<div className='row my-3'>
-<div className='d-flex justify-content-between'>
-      <h5 className='fw-bold'>Jwellery</h5>
-      <a href="#">View All</a>
-    </div>
-    <ProductCard />
-</div>
-
-{/* category row */}
-<div className='row my-3'>
-<div className='d-flex justify-content-between'>
-      <h5 className='fw-bold'>Bags</h5>
-      <a href="#">View All</a>
-    </div>
-    <ProductCard />
+    
 </div>
 
 </div>

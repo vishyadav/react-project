@@ -14,8 +14,6 @@ import ProductDetail from './components/ProductDetail';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Category from './components/Category';
-import Profile from './components/Profile';
-import Order from './components/Order';
 import Account from './components/Account';
 import SideMenu from './components/Drawer';
 import Gmap from './components/Gmap';
@@ -52,8 +50,6 @@ const App = () => {
       <Route path='/ProductDetail' element={<ProductDetail/>}/>
       <Route path='/Products' element={<Products title={Cat}/>}/>
       <Route path='/Category' element={<Category/>}/>
-      <Route path='/Profile' element={<Profile/>}/>
-      <Route path='/Order' element={<Order/>}/>
       <Route path='/Account' element={<Account/>}/>
       <Route path='/SideMenu' element={<SideMenu/>}/>
       <Route path='/Gmap' element={<Gmap/>}/>
@@ -61,7 +57,7 @@ const App = () => {
       <Route path='/AdminIndex' element={<AdminIndex/>}/>
       <Route path='/Sidebar' element={<Sidebar/>}/>
       <Route path='/Dashboard' element={<Dashboard/>}/>
-      </Routes>
+    </Routes>
     <Footer/>
     </div>
   )

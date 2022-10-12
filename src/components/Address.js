@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal';
 
 import '../styles/Account.css'
@@ -15,7 +15,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 
-const Address = () => {
+const Address = (element) => {
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -28,8 +28,6 @@ const Address = () => {
     height: "45px",
     width: "100%"
   };
-
-
   const halfwidth = {
     width: "100px",
     padding: "0 14px",
@@ -38,8 +36,11 @@ const Address = () => {
     height: "45px",
   }
 
+
+
   return (
     <React.Fragment>
+
         {/* Address section */}
         <section>
             <div className='my-5'><h4 className='fw-bold'>Address</h4></div>
@@ -56,8 +57,8 @@ const Address = () => {
 
                 <span className='p-3'><FmdGoodIcon/></span>
                 <section>
-                   <h6>Office</h6>
-                   <p>Vishal - Div International Technology & Services Opposite to Mamta mesh , besides sai kiran hospital, P & T Officers Colony, Khairtabad, Hyderabad,</p>
+                   <h6 className='text-capitalize'>{element.address_as}</h6>
+                   <small className='text-secondary'><strong>{element.receiver_name}</strong> - Div International Technology & Services Opposite to Mamta mesh , besides sai kiran hospital, P & T Officers Colony, Khairtabad, Hyderabad,</small>
                 </section>
                 <section className='text-end d-flex justify-content-between align-self-center ps-3 ps-md-3'>
                     <a href="#">Edit</a>&nbsp; &nbsp; <a href="#">Delete</a>
@@ -66,10 +67,7 @@ const Address = () => {
 
         </section>
 
-
         {/* add new address modal */}
-      
-
         <Modal
         show={show}
         onHide={handleClose}
@@ -98,13 +96,13 @@ const Address = () => {
                         <option>Mrs</option>
                         <option>Mr</option>
                     </select>
-                    <input type="text" placeholder="Receiver's Name" style={mystyle}/>
+                    <input type="text" placeholder="Receiver's Name" value={element.receiver_name} style={mystyle}/>
                 </section>
                 <section className='my-2'>
-                    <input type="text" placeholder="House No. / Flat / Office No." style={mystyle}/>
+                    <input type="text" placeholder="House No. / Flat / Office No." value={element.house_no} style={mystyle}/>
                 </section>
                 <section className='my-2'>
-                    <input type="text" placeholder="Street / Society / Office Name" style={mystyle}/>
+                    <input type="text" placeholder="Street / Society / Office Name" value={element.street} style={mystyle}/>
                 </section>
                 <section className='d-flex'>
                 <FormControl>
@@ -126,7 +124,8 @@ const Address = () => {
          
         </Modal.Body>
         
-      </Modal>
+        </Modal>
+
     </React.Fragment>
   )
 }

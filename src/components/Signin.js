@@ -39,7 +39,26 @@ let lbl_msg = '';
 
 
 function btn_continue(){
-  mobile_number = '9506280968';
+  
+
+  
+  var url = "https://app.trmartindia.com/api/Account/"+document.getElementById("txt_mobile").value;
+
+  mobile_number =document.getElementById("txt_mobile").value;
+var xhr = new XMLHttpRequest();
+xhr.open("GET", url);
+
+xhr.onreadystatechange = function () {
+   if (xhr.readyState === 4) {
+      console.log(xhr.status);
+      console.log(xhr.responseText);
+      if(xhr.responseText=="true"){
+
+
+
+
+
+
   txtmobile = document.getElementById("txt_mobile").value;
   let mobilebox = document.getElementById('mobilebox');
   namesection = document.getElementById('namefield');
@@ -73,6 +92,19 @@ function btn_continue(){
     mobileno_id.classList.add('disable_inputfield');
     document.getElementById('changebtn').style.display = 'block';
   }
+
+      }else{
+        alert("By"+document.getElementById("txt_mobile").value);
+      }
+
+   }};
+
+xhr.send();
+  
+  
+  
+  
+  
 }
 
 function save_namefield(){
@@ -102,14 +134,60 @@ function save_namefield(){
 }
 
 
+
+
+
 function btn_verify_continue(){
    txt_otp = document.getElementById('txt_otp').value;
    lbl_otpmsg = document.getElementById('lbl_otpmsg');
   if(txt_otp === otp_number){
     lbl_otpmsg.innerHTML = '(OTP Verified)';
     lbl_otpmsg.style.color = '#00a100';
-    alert(txtmobile +" "+txt_firstname+' '+txt_lastname+' '+ 'Your account created successfully.')
-    navigate('/');
+
+      //Api
+      var url = "https://app.trmartindia.com/api/Account";
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url); 
+      
+      xhr.setRequestHeader("Content-Type", "application/json");
+      
+      xhr.onreadystatechange = function () {
+         if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            //console.log(xhr.responseText);
+
+            if(xhr.status==204){   
+              alert(txtmobile +" "+txt_firstname+' '+txt_lastname+' '+ 'Your account created successfully.')
+
+              
+              let _userData=[txtmobile];
+              localStorage.setItem('userData',
+              JSON.stringify(_userData)
+              );
+
+              navigate("/");
+
+            }else{
+              let _userData=[txtmobile];
+              localStorage.setItem('userData',
+              JSON.stringify(_userData)
+          
+              );
+              navigate("/");
+              }
+
+         }};
+      
+      var data = '{"ID":null, "Name":'+'"'+txt_firstname+'"'+', "Lastname":'+'"'+txt_lastname+'"'+', "Phone":'+'"'+txtmobile+'"'+', "Username":'+'"'+txtmobile+'"'+',"Email":""}';
+      
+         
+      //console.log(data);
+      xhr.send(data);
+      
+      //End Api
+
+  //  navigate('/');
   }
   else{
     lbl_otpmsg.innerHTML='(Wrong OTP entered.)';
@@ -240,4 +318,4 @@ function resendotp(){
   )
 }
 
-export default Signin
+export default Signin 
